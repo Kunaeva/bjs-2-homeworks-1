@@ -33,9 +33,9 @@ class PrintEditionItem {
 
 class Magazine extends PrintEditionItem {
 
-    constructor(name, releaseDate, pagesCount, state, type) {
+    constructor(name, releaseDate, pagesCount) {
 
-        super(name, releaseDate, pagesCount, state, type);
+        super(name, releaseDate, pagesCount);
         this.type = "magazine";
     };
 
@@ -44,34 +44,44 @@ class Magazine extends PrintEditionItem {
 
 class Book extends PrintEditionItem {
 
-    constructor(author, name, releaseDate, pagesCount, state, type) {
-        super(author, name, releaseDate, pagesCount, state, type);
+    constructor(author, name, releaseDate, pagesCount) {
+        super(name, releaseDate, pagesCount);
 
         this.author = author;
         this.type = "book";
     };
 };
 class NovelBook extends Book {
-    constructor(author, name, releaseDate, pagesCount, state, type) {
-        super(author, name, releaseDate, pagesCount, state, type);
+    constructor(author, name, releaseDate, pagesCount) {
+        super(author, name, releaseDate, pagesCount);
         this.type = "novel";
     };
 };
 
 class FantasticBook extends Book {
-    constructor(author, name, releaseDate, pagesCount, state, type) {
-        super(author, name, releaseDate, pagesCount, state, type);
+    constructor(author, name, releaseDate, pagesCount) {
+        super(author, name, releaseDate, pagesCount);
         this.type = "fantastic";
     };
 };
 
 class DetectiveBook extends Book {
-    constructor(author, name, releaseDate, pagesCount, state, type) {
-        super(author, name, releaseDate, pagesCount, state, type);
+    constructor(author, name, releaseDate, pagesCount) {
+        super(author, name, releaseDate, pagesCount);
         this.type = "detective";
     };
 };
 
+
+//проверка
+const picknick = new FantasticBook(
+    "Аркадий и Борис Стругацкие",
+    "Пикник на обочине",
+    1972,
+    168
+  );
+
+  console.log(picknick)
 
 //2 задача
 
