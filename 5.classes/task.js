@@ -27,7 +27,7 @@ class PrintEditionItem {
     };
 
     fix() {
-        this.state *= 1.5;
+        this._state *= 1.5;
     };
 };
 
@@ -107,9 +107,7 @@ class Library {
 
         if (findBook) {
             return findBook;
-        } else {
-            return null;
-        };
+        } 
     };
 
     giveBookByName = function (bookName) {
