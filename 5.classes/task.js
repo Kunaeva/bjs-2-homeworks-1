@@ -13,9 +13,9 @@ class PrintEditionItem {
     set state(numberState) {
 
         if (numberState < 0) {
-            this.state = 0;
+            this._state = 0;
         } else if (numberState > 100) {
-            this.state = 100;
+            this._state = 100;
         } else {
             this._state = numberState;
         };
